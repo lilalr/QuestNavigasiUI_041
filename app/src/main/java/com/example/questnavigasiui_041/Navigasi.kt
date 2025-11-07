@@ -26,7 +26,17 @@ fun DataApp(
             startDestination = Navigasi.Formulirku.name,
 
             modifier = Modifier.padding(paddingValues = isiRuang)) {
-            c
+            composable(route = Navigasi.Formulirku.name) {
+                FormIsian(
+                    OnSubmitBtnClick = {
+                        navController.navigate(route = Navigasi.Detail.name)
+                    }
+                )
+            }
+
+        }
+    }
+}
 
 private fun cancelAndBackToFormulir(
     navController: NavHostController
